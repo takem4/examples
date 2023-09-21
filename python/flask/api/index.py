@@ -1,10 +1,11 @@
 from flask import Flask
 
 app = Flask(__name__)
+tmp = 'Hello {name}! \n{message}'
 
 @app.route('/')
 def home():
-    return 'Hello, World!'
+    return tmp
 
 @app.route('/about')
 def about():
